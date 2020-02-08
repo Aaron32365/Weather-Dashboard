@@ -1,0 +1,42 @@
+
+*{
+    font-family: 'Source Code Pro', monospace;
+}
+
+body{
+    background-color: #FBFBFB;
+}
+
+#header-main{
+    margin-top: 42px;
+    font-size: 2.5em;
+    color: white;
+    border-radius: 8px;
+    background-color: #252525;
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+}
+
+#container-left{
+    margin-top: 12px;
+    height: 624px; 
+    border-radius: 6px;
+    background-color: #F2F2F2;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#cityList{
+    margin-top: 14px;
+    height: 500px;
+    border-style: solid;
+    border-radius: 6px;
+    border-color: #EAEAEA;
+    border-width: 2px;
+    background-color: white;
+    
+}
