@@ -20,6 +20,12 @@ body{
     font-family: 'Fjalla One', sans-serif;
 }
 
+#search-header{
+    margin-left: 12px;
+    margin-top: 12px;
+    font-family: 'Fjalla One', sans-serif;
+}
+
 #container-left{
     margin-top: 16px;
     height: 624px; 
@@ -47,7 +53,14 @@ body{
     clear: both;
 }
 
+#cityInput{
+    margin-left: 12px;
+    margin-right: 10px;
+}
+
+
 #cityList{
+    margin-left: 12px;
     margin-top: 16px;
     height: 500px;
     border-style: solid;
@@ -74,9 +87,50 @@ body{
     margin-top: 24px;
     margin-left: 6px;
     margin-right: 6px;
+    height: 275px;
     border-style: solid;
     border-radius: 6px;
     border-color: #EAEAEA;
     border-width: 2px;
     background-color: white;
+}
+#nameDate-Today{
+    margin-left: 16px;
+    font-size: 1.5em;
+    font-family: 'Fjalla One', sans-serif;
+}
+.text-Style{
+    margin-top: 8px;
+    margin-left: 28px;
+}
+#top{
+    margin-top: -18px;
+    width: 90%; 
+    float: left;
+}
+#container-right-lower{
+    background-color: white;
+    margin-top: 24px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-style: solid;
+    border-radius: 6px;
+    border-color: #EAEAEA;
+    border-width: 2px;
+    height: 265px;
+}
+.header-text{
+    margin-top: 12px;
+    margin-left: 16px;
+    font-size: 1.5em;
+    font-family: 'Fjalla One', sans-serif;
+}
+#DayCard{
+    margin-top: 12px;
+    background-color: blue;
+    margin-right: 18px;
+    height: 164px
+}
+#cards{
+    margin-left: 18px;
 }
