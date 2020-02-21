@@ -26,6 +26,14 @@ body{
     font-family: 'Fjalla One', sans-serif;
 }
 
+#search{
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #42B1F9;
+    background-color: #42B1F9;
+    color: white;
+}
+
 #container-left{
     margin-top: 16px;
     height: 624px; 
@@ -39,6 +47,7 @@ body{
 }
 
 #container-main{
+    max-height: fit-content;
     background-color: #3E94F0;
     border-radius: 4px;
     border-style: solid;
@@ -109,6 +118,7 @@ body{
     float: left;
 }
 #container-right-lower{
+    object-fit: scale-down;
     background-color: white;
     margin-top: 24px;
     margin-left: 6px;
@@ -126,11 +136,94 @@ body{
     font-family: 'Fjalla One', sans-serif;
 }
 #DayCard{
+    font-size: .9em;
     margin-top: 12px;
-    background-color: blue;
+    background-color: #1F2FF3;
     margin-right: 18px;
-    height: 164px
+    height: 164px;
+    border-color: #1F2FF3;
+    border-style: solid;
+    border-radius: 24px;
 }
 #cards{
     margin-left: 18px;
+}
+
+#forecastText{
+    margin-left: -12px;
+    margin-top: 20px;
+    color: white;
+    font-size: 1em;
+}
+
+#forecastText img{
+    width: 42px;
+    height: 42px;
+}
+
+@media screen and (max-width: 1000px){
+    #container-left{
+        min-width: 90%;
+        max-width: 90%;
+    }
+
+    #forecastText{
+        font-size: 1.3em;
+        text-align: center;
+    }
+    #container-right{
+        max-width: 90%;
+        min-width: 90%;
+        max-height: fit-content;
+    }
+    
+}
+
+
+@media screen and (min-width: 775px){
+    #DayCard{
+        padding-right: 68px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    #container-right-lower{
+        min-height: 420px;
+    }
+    #container-right{
+        min-height: 775px;
+    }
+    #container-left{
+        min-height: 775px;
+    }
+    #cityList{
+        min-height: 648px;
+    }
+    #forecastText{
+        font-size: .9em;
+    }
+    #DayCard{
+    padding-right: 68px;
+    }
+}
+
+
+@media screen and (max-width: 580px){
+    #container-right{
+        min-height: 1340px;
+    }
+    #cards{
+        margin-right: -4px;
+    }
+    #container-right-lower{
+        min-height: 948px;
+    }
+    #forecastText{
+        text-align: center;
+        font-size: 1.3em;
+    }
+    #DayCard{
+        
+    padding-right: 0px;
+    }
 }
