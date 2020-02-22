@@ -26,12 +26,23 @@ body{
     font-family: 'Fjalla One', sans-serif;
 }
 
-#search{
+button{
     border-style: solid;
     border-radius: 10px;
     border-color: #42B1F9;
     background-color: #42B1F9;
     color: white;
+}
+
+#history{
+    margin-top: 2px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #464646;
+    border-radius: 2px;
+    padding: 6px;
+    background-color: #E4ECFF;
+    text-align: center;
 }
 
 #container-left{
@@ -138,10 +149,10 @@ body{
 #DayCard{
     font-size: .9em;
     margin-top: 12px;
-    background-color: #1F2FF3;
+    background-color: #3172FF;
     margin-right: 18px;
     height: 164px;
-    border-color: #1F2FF3;
+    border-color: #3172FF;
     border-style: solid;
     border-radius: 24px;
 }
@@ -159,6 +170,17 @@ body{
 #forecastText img{
     width: 42px;
     height: 42px;
+}
+
+a{
+    
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 1000px){
@@ -187,6 +209,9 @@ body{
 }
 
 @media screen and (max-width: 1200px){
+    #clear{
+        margin-left: 12px;
+    }
     #container-right-lower{
         min-height: 420px;
     }

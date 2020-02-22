@@ -1,18 +1,24 @@
-    $("#search").on("click", function(event){
+$("#search").on("click", function(event){
+    if (!$("#cards").html("")){
+        event.preventDefault()
+        return
+    }else{
     event.preventDefault()
-    if(!$("#cards").html("")){
-        return;
-    }
-    else{
         var key = "6c427e9502046eb2009affa9ab9a0d21"
-        var city = $("#cityInput").val().trim();
+        var city = $("#cityInput").val().toLowerCase().trim();
         var qeuryUrlDay = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key
+        var search = city
+        localStorage.setItem(search, search)
         $.ajax({
             url: qeuryUrlDay,
             method: "GET"
         })
-        .then(function(response){
+        .then(start)
+    }
+    function start(response){
+        if(response != undefined){
             check5Day()
+            searchHistory()
             $("#container-right-upper").show()
             $("#container-right-lower").show()
             data = response;
@@ -26,14 +32,19 @@
             var d = new Date()
             console.log(d) 
             date = String(d).slice(4,15)
-    
+
             $("#nameDate-Today").html(name  + " (" + date + ")" + "<img src='" + "http://openweathermap.org/img/wn/" + iconRef + "@2x.png" + "'" + " alt='Weather icon'>" +"<hr id='top'>" )
             $("#humidity").attr("class", "text-Style").text("Humidity: " + humid + "%")
             $("#temp").attr("class", "text-Style").text("Temperature: " + temp + " F°")
             $("#wind").attr("class", "text-Style").text("Wind Speed: " + wind + "MPH")
-            
-        })
+    
+        }
+        else{
+            console.log("error")
+            return
+        }        
     }
+
      function check5Day(){
         var qeuryUrl5Day = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + key
          $.ajax({
@@ -60,7 +71,21 @@
                 j++
              }
          })
+        
      }
-
+            function searchHistory(){
+                var history = $("#recentSearches")
+                $("#recentSearches").empty()
+                for( var i = 0; i < localStorage.length; i++){//<a href=""></a>
+                    history.append("<a href='#' class='col-sm-12' id='history'> " + localStorage.getItem(localStorage.key(i)) + "<br> </a>")
+                }
+        }
 })
 
+$("#clear").on("click", function(event){
+    event.preventDefault()
+    localStorage.clear()
+    $("#recentSearches").empty()
+})
+
+//$(document).on("click", "#history", start(response))
