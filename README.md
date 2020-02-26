@@ -3,7 +3,6 @@ A basic weather dashboard allowing users to plan trips accordingly.
 
 
 
-![Aaron Williams]
 https://github.com/Aaron32365/Weather-Dashboard
 
 <h2>My Weather Dashboard! </h2>
